@@ -67,3 +67,7 @@ func _input(event):
 		if event.button_mask == MOUSE_BUTTON_LEFT:
 			if activation_type == ActivationType.Click or ActivationType.Both:
 				handle_activation()
+	if event is InputEventKey:
+		if event.keycode == activation_key:
+			if activation_type == ActivationType.KeyPress or ActivationType.Both:
+				handle_activation()
